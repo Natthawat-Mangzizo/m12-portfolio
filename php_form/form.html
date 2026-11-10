@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Power Up! — Browser to Server</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f8f9fa; }
+        .card { background: white; padding: 20px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 20px; }
+        input[type="text"] { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; border: none; border-radius: 4px; cursor: pointer; }
+        .btn-get { background: white; border: 1px solid #ccc; }
+        .btn-post { background: #4285f4; color: white; }
+    </style>
 </head>
 <body>
     <h2>Power Up! — Browser to Server</h2>
-    
-    <!-- ฟอร์มทดสอบ GET -->
-    <form action="receive.php" method="GET">
+    <p>This is a separate practice form. It does not save Portfolio data yet.</p>
+
+    <!-- ฟอร์มส่งด้วย GET -->
+    <div class="card">
         <h3>Try GET</h3>
-        <label>Display name</label><br>
-        <input type="text" name="name"><br><br>
-        <button type="submit">Send with GET</button>
-    </form>
+        <form action="receive.php" method="GET">
+            <label>Display name</label>
+            <input type="text" name="name">
+            <button type="submit" class="btn-get">Send with GET</button>
+        </form>
+    </div>
 
-    <hr>
-
-    <!-- ฟอร์มทดสอบ POST -->
-    <form action="receive.php" method="POST">
+    <!-- ฟอร์มส่งด้วย POST -->
+    <div class="card">
         <h3>Try POST</h3>
-        <label>Display name</label><br>
-        <input type="text" name="name"><br><br>
-        <button type="submit">Send with POST</button>
-    </form>
+        <form action="receive.php" method="POST">
+            <label>Display name</label>
+            <input type="text" name="name">
+            <button type="submit" class="btn-post">Send with POST</button>
+        </form>
+    </div>
+
+    <p style="color: gray;">Open Developer Tools — Network and compare the requests.</p>
 </body>
 </html>
