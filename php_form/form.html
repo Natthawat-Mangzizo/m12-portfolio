@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power Up! — Browser to Server</title>
+</head>
+<body>
+    <h2>Power Up! — Browser to Server</h2>
+    
+    <!-- ฟอร์มทดสอบ GET -->
+    <form action="receive.php" method="GET">
+        <h3>Try GET</h3>
+        <label>Display name</label><br>
+        <input type="text" name="name"><br><br>
+        <button type="submit">Send with GET</button>
+    </form>
+
+    <hr>
+
+    <!-- ฟอร์มทดสอบ POST -->
+    <form action="receive.php" method="POST">
+        <h3>Try POST</h3>
+        <label>Display name</label><br>
+        <input type="text" name="name"><br><br>
+        <button type="submit">Send with POST</button>
+    </form>
+</body>
+</html>
